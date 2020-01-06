@@ -30,7 +30,8 @@ class PolyTreeNode
     end
 
     def inspect
-        p self.value
+        p "Value: #{self.value}"
+        # p "Children: #{self.children}"
     end
 
     def dfs(target)
