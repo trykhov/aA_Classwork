@@ -9,26 +9,9 @@ class PolyTreeNode
     end
 
     def parent=(node)
-        # either self already has a parent or it doesn't
-        # if it doesn't, @parent = nil
-        # if it does, are we reassigning?
-            # remove self from it's current_parent.children
-            # then assign self.parent = node
-            # then add self to parent.children
-
-        if !self.parent.nil?
-            prev_parent = self.parent
-            prev_parent.children = prev_parent.children.select do |child| 
-                child != self
-            end
-        end
-
-        if node != nil && !node.children.include?(self)
-            @parent = node
-            node.children << self
-        else
-            @parent = nil
-        end
+        @parent.children.delete(self) if self.parent
+        @parent = node
+        node.children << self unless node.nil?
     end
 
     def add_child(node)
@@ -55,8 +38,7 @@ class PolyTreeNode
 
     def bfs(target)
         return nil if self.nil?
-        queue = []
-        queue << self
+        queue = [self]
         while !queue.empty?
             node = queue.shift
             return node if node.value == target

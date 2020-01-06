@@ -15,20 +15,9 @@ class PolyTreeNode
             # remove self from it's current_parent.children
             # then assign self.parent = node
             # then add self to parent.children
-
-        if !self.parent.nil?
-            prev_parent = self.parent
-            prev_parent.children = prev_parent.children.select do |child| 
-                child != self
-            end
-        end
-
-        if node != nil && !node.children.include?(self)
-            @parent = node
-            node.children << self
-        else
-            @parent = nil
-        end
+        @parent.children.delete(self) if self.parent
+        @parent = node
+        node.children << self unless node.nil?
     end
 
     def add_child(node)
