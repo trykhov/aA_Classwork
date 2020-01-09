@@ -1,14 +1,14 @@
 
 
 class Piece
-  # attr_reader :color
+  # attr_reader :color, 
   # attr_accessor :board, :pos
 
-  # def initialize(color, board, pos)
-  #   @color = color
-  #   @board = board
-  #   @pos = pos 
-  # end
+  def initialize(color, board, pos)
+    @color = color
+    @board = board
+    @pos = pos 
+  end
 
   # def to_s(pos)
   #   # convert position to a string
@@ -19,18 +19,21 @@ class Piece
   #   self.board[pos].empty? # empty here is the Array#empty
   # end 
 
-  # def valid_moves
-  # end
+  def valid_moves
+    # call #moves of the object
+    # self.moves.select
+  end
 
   # def pos=(val)
   #   self.pos = val
   # end
 
-  # def symbol
-  #   color
-  # end
+  def symbol
+    @symbol
+  end
 
   # def move_into_check?(end_pos)
   # end
+
 
 end
