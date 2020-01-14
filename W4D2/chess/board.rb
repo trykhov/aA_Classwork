@@ -74,8 +74,8 @@ end
 
 board = Board.new
 # board.move_piece([0,0], [5,6])
-board.print_rows.inspect
-
+# board.print_rows.inspect
+p board.methods
 # pos = [0,0]
 # board.move_piece(pos, [3,8])
 # board.print_rows

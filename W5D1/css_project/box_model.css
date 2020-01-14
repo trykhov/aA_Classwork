@@ -1,0 +1,48 @@
+div {
+  height: 200px;
+  width: 200px;
+  padding: 50px;
+  border: solid 5px black;
+}
+
+#first-div {
+  background-color: #39cccc;
+}
+
+#second-div {
+  background-color: #ff4136;
+  box-sizing: border-box;
+}
+
+#third-div {
+  height: auto;
+}
+
+p {
+  background-color: #7fdbff;
+}
+
+.image-1-container {
+  height: 600px;
+  width: 200px;
+  background-color: green;
+}
+
+.image-1-container div {
+  padding: 0px;
+  height: auto;
+}
+
+.image-2-container {
+  height: 600px;
+  width: auto;
+  background-color: green;
+}
+
+.image-1-container img {
+  width: 100%;
+}
+
+/* .image-1-container div{
+  width: 100%;
+} */
