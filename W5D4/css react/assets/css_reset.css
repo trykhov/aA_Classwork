@@ -1,0 +1,16 @@
+* {
+  margin : initial;
+  padding : initial;
+  border : initial;
+  font: inherit;
+  line-height: 1.5;
+}
+
+li {
+  list-style: initial;
+}
+
+img {
+  width: 100%;
+}
+
