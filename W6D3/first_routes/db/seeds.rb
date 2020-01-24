@@ -15,15 +15,17 @@ ActiveRecord::Base.transaction do
   user_2 = User.create(username: 'noobmaster69')
   user_3 = User.create(username: 'doug')
 
-  art_1 = Artwork.create(title: 'Cortona',"i'm a savage.png", artist_id: user_1.id)
-  art_2 = Artwork.create(title: 'thor',"fat_thor.png", artist_id: user_2.id)
-  art_3 = Artwork.create(title: 'anything',"pizza.png", artist_id: user_3.id)
-  art_4 = Artwork.create(title: 'pizza',"collab.png", artist_id: user_2.id)
+  art_1 = Artwork.create(title: 'Cortona',image_url: "i'm a savage.png", artist_id: user_1.id)
+  art_2 = Artwork.create(title: 'thor',image_url: "fat_thor.png", artist_id: user_2.id)
+  art_3 = Artwork.create(title: 'anything',image_url: "pizza.png", artist_id: user_3.id)
+  art_4 = Artwork.create(title: 'pizza',image_url: "collab.png", artist_id: user_2.id)
 
-  ArtworkShared.create(art_1.id, user_1.id)
-  ArtworkShared.create(art_1.id, user_2.id)
-  ArtworkShared.create(art_4.id, user_3.id)
-  ArtworkShared.create(art_3.id, user_2.id)
-  ArtworkShared.create(art_3.id, user_1.id)
+  ArtworkShare.create(artwork_id: art_1.id, viewer_id: user_1.id)
+  ArtworkShare.create(artwork_id: art_1.id, viewer_id: user_2.id)
+  ArtworkShare.create(artwork_id: art_4.id, viewer_id: user_3.id)
+  ArtworkShare.create(artwork_id: art_3.id, viewer_id: user_2.id)
+  ArtworkShare.create(artwork_id: art_3.id, viewer_id: user_1.id)
 
+
+  Comment.create(body: "finish the fight", user_id: user_1.id, artwork_id: art_1.id)
 end
