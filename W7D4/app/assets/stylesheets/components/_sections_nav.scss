@@ -1,0 +1,23 @@
+.topics {
+  border-bottom: 1px solid lightgrey;
+  div {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 0;
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    li:last-child:hover {
+      text-decoration: underline;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+.topics li:hover {
+  background-color: lightgrey;
+}

@@ -1,0 +1,45 @@
+.main-nav {
+ display: flex;
+ justify-content: space-between;
+ border-bottom: lightgrey 1px solid;
+}
+
+.left-nav > ul,
+.right-nav > ul {
+  // list-style-type: none;
+  display: flex;
+  // width: 70%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-nav > ul > li {
+  //  display: inline-block;
+  padding: 20px;
+}
+
+.right-nav > ul > li {
+  // display: inline-block;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.right-nav > ul > li:last-of-type {
+ 
+}
+
+.left-nav > ul > li:hover,
+.right-nav > ul > li:last-of-type:hover {
+  background-color: lightgrey;
+}
+
+.left-nav span {
+  font-size: inherit;
+  text-transform: uppercase;
+  margin-left: 5px;
+}
+
+
+.right-nav i {
+  font-size: 20px;
+}
