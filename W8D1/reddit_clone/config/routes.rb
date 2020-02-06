@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resource :session, only:[:create, :new, :destroy]
   resources :users do 
     resources :subs, only:[:edit, :update]
+    resources :posts, only:[:edit, :update]
   end
-  resource :subs, except:[:edit, :update]
+  resources :subs, except:[:edit, :update]
+  resources :posts, except:[:index, :edit, :update]
 end
