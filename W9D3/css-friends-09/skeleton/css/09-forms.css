@@ -1,0 +1,41 @@
+/* PHASE 9: Forms */
+
+.field-set {
+  float: left;
+  width: 500px;
+  margin-left: 20px;
+  border: 3px black solid;
+  padding: 19px;
+  background-color: #eee;
+}
+
+.wall {
+  overflow: auto;
+  
+  
+}
+
+.form-thumb {
+  float: left;
+}
+
+.input > label {
+  display: block;
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+
+.input > input {
+  width: calc(100% - 22px);
+  margin-bottom: 20px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+textarea {
+  background-color: white;
+  width: calc(100% - 22px);
+  padding: 10px;
+  border-radius: 5px;
+}
