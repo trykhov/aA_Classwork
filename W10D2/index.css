@@ -1,0 +1,57 @@
+#root {
+    font-family: sans-serif;
+    margin: 0 auto;
+    width: 45%;
+}
+
+#clock-container {
+    background-color: orange;
+    border: 2px black solid;
+    color: #fff;
+    font-family: 'Tomorrow', sans-serif;
+    font-size: 3vw;
+}
+
+.clock-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+}
+
+#tabs-container {
+    border-radius: 12px 12px 0 0;
+}
+
+#tabs-headers {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    background-color: cornflowerblue;
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 12px 12px 0 0;
+    width: 33%;
+}
+
+.active {
+    border-bottom: none;
+}
+
+.header:hover {
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+}
+
+#tabs-content {
+    align-items: center;
+    background-color: cornflowerblue;
+    border: 2px solid black;
+    border-top: none;
+    color: #fff;
+    display: flex;
+    height: 200px;
+    justify-content: center;
+}
