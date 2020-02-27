@@ -1,0 +1,13 @@
+import { connect } from 'react-redux';
+import { createNewUser } from '../../actions/session';
+import SignUp from './signup';
+
+
+const mapDispatchToProps = dispatch => ({
+    // calling the createNewUser thunk action creator
+    // user SIGN UP
+    createNewUser: formUser => dispatch(createNewUser(formUser))
+});
+
+
+export default connect(null, mapDispatchToProps)(SignUp);
