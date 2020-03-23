@@ -10,7 +10,7 @@ const tweets = require('./routes/api/tweets');
 
 const passport = require('passport'); // need to authenticate our tokens and construct private routes
 
-mongoose.connect(db, { newUserUrlParser: true })
+mongoose.connect(db, { newUserUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log("Connected to MongoDB successfully"))
     .catch(err => console.log(err))
 
